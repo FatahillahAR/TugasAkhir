@@ -5,6 +5,7 @@ public class Tamu extends User {
     public String noTelp;
 
 
+
     public Tamu(String nik, String nama, String alamat, String noTelp) {
         super(nama,nik);
         this.alamat = alamat;
@@ -14,6 +15,14 @@ public class Tamu extends User {
     @Override
     public String getNama() {
         return nama;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public String getNoTelp() {
+        return noTelp;
     }
 
     @Override

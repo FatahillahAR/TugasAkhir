@@ -66,7 +66,7 @@ public class Hotel {
         int i = -1;
         for (Reservasi reservasi : daftarReservasi) {
             i += 1;
-            if (reservasi.kamar.kodeKamar.equals(kodeKamar)) {
+            if (reservasi.kamar.kodeKamar.equals(kodeKamar)&&reservasi.tanggalCheckOut.equals("Belum CheckOut")) {
                 if (!reservasi.kamar.status) {
                     return i;
                 }

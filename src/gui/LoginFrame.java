@@ -1,3 +1,5 @@
+package gui;
+
 import controller.Auth;
 
 import javax.swing.*;
@@ -7,13 +9,12 @@ import java.awt.event.ActionListener;
 
 public class LoginFrame extends JFrame {
     Auth login = new Auth();
-    LoginFrame(){
+    public LoginFrame(){
         super("LoginForm");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLayout(null);
         setSize(364,415);
-        setVisible(true);
 
         JLabel loginLabel = new JLabel("Login Staff");
         loginLabel.setBounds(64,104,235,34);
@@ -45,6 +46,8 @@ public class LoginFrame extends JFrame {
         add(userText);
         add(passText);
         add(okButton);
+
+        setVisible(true);
         okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -53,6 +56,9 @@ public class LoginFrame extends JFrame {
                 boolean status = login.login(userValue,passValue);
                 if(status){
                     JOptionPane.showMessageDialog(null,"Login Sukses","Message",JOptionPane.INFORMATION_MESSAGE);
+                    dispose();
+                    new MenuFrame();
+
                 }
                 else{
                     JOptionPane.showMessageDialog(null,"Login Gagal","Message",JOptionPane.ERROR_MESSAGE);

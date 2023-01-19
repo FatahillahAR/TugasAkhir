@@ -5,8 +5,9 @@ public class Reservasi {
     public Tamu tamu;
     public Kamar kamar;
     public int malam;
+
     public String tanggalCheckIn;
-    public String tanggalCheckOut;
+    public String tanggalCheckOut="Belum CheckOut";
 
     public Reservasi() {
     }
@@ -32,5 +33,16 @@ public class Reservasi {
 
     public void setTanggalCheckOut(String tanggalCheckOut) {
         this.tanggalCheckOut = tanggalCheckOut;
+    }
+    public Tamu getTamu() {
+        return tamu;
+    }
+
+    public Kamar getKamar() {
+        return kamar;
+    }
+
+    public int getMalam() {
+        return malam;
     }
 }

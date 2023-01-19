@@ -3,6 +3,11 @@ package entity;
 public class Kamar {
     public String kodeKamar;
     public String jenisKamar;
+
+    public boolean isStatus() {
+        return status;
+    }
+
     public int hargaPerMalam;
     public boolean status;
 
@@ -19,6 +24,19 @@ public class Kamar {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
+    public String getKodeKamar() {
+        return kodeKamar;
+    }
+
+    public String getJenisKamar() {
+        return jenisKamar;
+    }
+
+    public int getHargaPerMalam() {
+        return hargaPerMalam;
+    }
+
     public void dataKamar() {
         System.out.println("Kode Kamar      : " + kodeKamar);
         System.out.println("Jenis Kamar     : " + jenisKamar);
